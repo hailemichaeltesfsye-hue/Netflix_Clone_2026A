@@ -6,12 +6,12 @@ import RowList from '../../Components/Rows/RowList/rowList';
 
 const Home = () => {
   return (
-    <>
+    <div className="home-page">
       <Header />
       <Banner />
       <RowList />
       <Footer />
-    </>
+    </div>
   );
 };
 

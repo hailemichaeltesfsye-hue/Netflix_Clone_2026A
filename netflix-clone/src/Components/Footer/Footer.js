@@ -47,7 +47,7 @@ const Footer = () => {
           <p>Service Code</p>
         </div>
         <div className='copy-write'>
-          <p>&copy; 1997-2024 Netflix, Inc.</p>
+          <p>&copy; 1997-2026 Netflix, Inc.</p>
         </div>
       </div>
     </div>

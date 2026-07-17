@@ -4,43 +4,60 @@
   color: #757575;
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  align-items: center;
+  padding: 48px 20px 60px;
+  border-top: 1px solid rgba(117, 117, 117, 0.25);
 }
 
 .footer_inner_container {
-  width: 90%;
-  max-width: 1200px;
+  width: min(1200px, 100%);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .footer_icons {
   display: flex;
+  justify-content: center;
   gap: 16px;
   margin-bottom: 20px;
 }
 
 .footer_icons svg {
-  color: white;
-  font-size: 24px;
+  color: #f5f5f1;
+  font-size: 28px;
   cursor: pointer;
+  opacity: 0.95;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.footer_icons svg:hover {
+  transform: scale(1.08);
+  opacity: 1;
 }
 
 .footer_data {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  max-width: 800px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  width: 100%;
+  justify-items: center;
 }
 
 .footer_data ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .footer_data li {
   color: #757575;
   font-size: 13px;
+  line-height: 1.6;
   margin-bottom: 12px;
   cursor: pointer;
 }
@@ -51,6 +68,7 @@
 
 .service_code {
   margin-top: 20px;
+  text-align: center;
 }
 
 .service_code p {
@@ -64,9 +82,16 @@
 
 .copy-write {
   margin-top: 16px;
+  text-align: center;
 }
 
 .copy-write p {
   color: #757575;
   font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .footer_data {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
