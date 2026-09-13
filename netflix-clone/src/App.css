@@ -1,8 +1,31 @@
 .App {
   min-height: 100vh;
   background-color: #111;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .home-page {
-  padding-top: 84px;
+  padding-top: 68px;
+  width: 100%;
+}
+
+/* Global Responsive Headings & Text Helpers */
+h1, h2, h3, h4, h5, h6 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* Tablet Media Query */
+@media (max-width: 768px) {
+  .home-page {
+    padding-top: 60px;
+  }
+}
+
+/* Mobile Media Query */
+@media (max-width: 480px) {
+  .home-page {
+    padding-top: 56px;
+  }
 }

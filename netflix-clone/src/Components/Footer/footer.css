@@ -90,8 +90,35 @@
   font-size: 13px;
 }
 
+/* Tablet (max-width: 768px) */
 @media (max-width: 768px) {
+  .footer_outer_container {
+    padding: 36px 16px 44px;
+  }
+
   .footer_data {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer_outer_container {
+    padding: 28px 12px 36px;
+  }
+
+  .footer_icons svg {
+    font-size: 22px;
+  }
+
+  .footer_data {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .footer_data li {
+    font-size: 12px;
+    margin-bottom: 8px;
   }
 }

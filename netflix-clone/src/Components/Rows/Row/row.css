@@ -1,13 +1,13 @@
 .row {
-  margin-left: 20px;
+  margin: 20px 0;
   color: white;
-  margin-top: 16px;
+  width: 100%;
 }
 
 .row__title {
   padding-left: 20px;
   margin-bottom: 8px;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   font-weight: 600;
 }
 
@@ -15,10 +15,11 @@
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 6px 20px 10px;
-  gap: 8px;
+  padding: 6px 20px 12px;
+  gap: 10px;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 .row__posters::-webkit-scrollbar {
@@ -36,6 +37,11 @@
   height: 210px;
   border-radius: 4px;
   display: block;
+  transition: transform 0.25 ease;
+}
+
+.row__poster:hover {
+  transform: scale(1.05);
 }
 
 .row__posterLarge {
@@ -95,4 +101,68 @@
   height: 36px;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .row {
+    margin: 16px 0;
+  }
+
+  .row__title {
+    padding-left: 16px;
+  }
+
+  .row__posters {
+    padding: 6px 16px 10px;
+    gap: 8px;
+  }
+
+  .row__poster {
+    width: 120px;
+    height: 170px;
+  }
+
+  .row__posterLarge {
+    width: 140px;
+    height: 200px;
+  }
+
+  .row__posterTitle {
+    max-width: 120px;
+    font-size: 0.74rem;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .row {
+    margin: 12px 0;
+  }
+
+  .row__title {
+    padding-left: 12px;
+  }
+
+  .row__posters {
+    padding: 4px 12px 8px;
+    gap: 6px;
+  }
+
+  .row__poster {
+    width: 95px;
+    height: 135px;
+  }
+
+  .row__posterLarge {
+    width: 110px;
+    height: 158px;
+  }
+
+  .row__posterTitle {
+    max-width: 95px;
+    font-size: 0.68rem;
+  }
 }
