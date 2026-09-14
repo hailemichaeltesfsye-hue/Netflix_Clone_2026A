@@ -31,11 +31,11 @@ const Header = () => {
               <img src={NetflixLogo} alt="Netflix Logo" className="header__logo" />
             </li>
             <li className="nav_link active">Home</li>
-            <li className="nav_link">TVShows</li>
-            <li className="nav_link">Movies</li>
-            <li className="nav_link">Latest</li>
-            <li className="nav_link">MyList</li>
-            <li className="nav_link hide_on_mobile">Browse by Languages</li>
+            <li className="nav_link">TV Shows</li>
+            <li className="nav_link hide_on_small">Movies</li>
+            <li className="nav_link hide_on_mobile">Latest</li>
+            <li className="nav_link hide_on_mobile">My List</li>
+            <li className="nav_link hide_on_tablet">Browse by Languages</li>
           </ul>
         </div>
         <div className='header_right'>
